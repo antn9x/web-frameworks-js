@@ -1,4 +1,4 @@
-import { BUN_PORT } from "./helper/constant"
+import { BUN_PORT, EXPRESS_PORT, FASTIFY_PORT, SIFRR_PORT, UWS_PORT } from "./helper/constant"
 import autocannon from 'autocannon'
 
 async function run() {
@@ -13,7 +13,7 @@ async function run() {
 }
 async function runUWS() {
   const resultUWS = await autocannon({
-    url: 'http://localhost:' + BUN_PORT,
+    url: 'http://localhost:' + UWS_PORT,
     connections: 10, //default
     pipelining: 1, // default
     duration: 10 // default
@@ -22,7 +22,7 @@ async function runUWS() {
 }
 async function runSIFRR() {
   const resultSIFRR = await autocannon({
-    url: 'http://localhost:' + BUN_PORT,
+    url: 'http://localhost:' + SIFRR_PORT,
     connections: 10, //default
     pipelining: 1, // default
     duration: 10 // default
@@ -31,7 +31,7 @@ async function runSIFRR() {
 }
 async function runFASTIFY() {
   const resultFASTIFY = await autocannon({
-    url: 'http://localhost:' + BUN_PORT,
+    url: 'http://localhost:' + FASTIFY_PORT,
     connections: 10, //default
     pipelining: 1, // default
     duration: 10 // default
@@ -40,7 +40,7 @@ async function runFASTIFY() {
 }
 async function runEXPRESS() {
   const resultEXPRESS = await autocannon({
-    url: 'http://localhost:' + BUN_PORT,
+    url: 'http://localhost:' + EXPRESS_PORT,
     connections: 10, //default
     pipelining: 1, // default
     duration: 10 // default
