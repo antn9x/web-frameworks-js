@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "elysia": "bun run frameworks/elysia.ts",
     "bun": "bun run frameworks/bun.ts",
     "express": "ts-node frameworks/express.ts",
     "fastify": "ts-node frameworks/fastify.ts",
@@ -17,6 +18,7 @@
   "dependencies": {
     "@sifrr/server": "^0.0.9",
     "autocannon": "^7.11.0",
+    "elysia": "^0.6.23",
     "express": "^4.18.2",
     "fastify": "^4.18.0",
     "lodash": "^4.17.21",

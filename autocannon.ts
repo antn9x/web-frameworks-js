@@ -1,4 +1,4 @@
-import { BUN_PORT, EXPRESS_PORT, FASTIFY_PORT, SIFRR_PORT, UWS_PORT } from "./helper/constant"
+import { BUN_PORT, ELYSIA_PORT, EXPRESS_PORT, FASTIFY_PORT, SIFRR_PORT, UWS_PORT } from "./helper/constant"
 import autocannon from 'autocannon'
 
 function createOptions(port: number): autocannon.Options {
@@ -30,11 +30,16 @@ async function runEXPRESS() {
   const resultEXPRESS = await autocannon(createOptions(EXPRESS_PORT))
   console.log('express', resultEXPRESS['statusCodeStats'])
 }
+async function runELYSIA() {
+  const resultELYSIA = await autocannon(createOptions(ELYSIA_PORT))
+  console.log('elysia', resultELYSIA['statusCodeStats'])
+}
 
 (async () => {
-  await runBun();
-  await runUWS();
-  await runSIFRR();
+  // await runBun();
+  // await runUWS();
+  // await runSIFRR();
   await runFASTIFY();
-  await runEXPRESS();
+  await runELYSIA();
+  // await runEXPRESS();
 })();
