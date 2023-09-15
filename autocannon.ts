@@ -3,7 +3,7 @@ import autocannon from 'autocannon'
 
 function createOptions(port: number): autocannon.Options {
   return {
-    url: `http://127.0.0.1:${port}/`,
+    url: `http://localhost:${port}/`,
     connections: 10, //default
     pipelining: 1, // default
     duration: 10, // default

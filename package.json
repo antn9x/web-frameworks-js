@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "bun": "bun run frameworks/bun.ts",
     "express": "ts-node frameworks/express.ts",
     "fastify": "ts-node frameworks/fastify.ts",
     "sifrr": "ts-node frameworks/sifrr.ts",
